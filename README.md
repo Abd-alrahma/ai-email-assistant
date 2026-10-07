@@ -48,19 +48,19 @@ The application actively records operations using Python's standard logging. Too
 ## 10. Project Structure
 ```text
 email_assistant/
-├── credentials/          # [LOCAL, EXCLUDED FROM GIT] Directory for Gmail OAuth JSONs
-│   ├── credentials.json  # [LOCAL, EXCLUDED FROM GIT]
-│   └── token.json        # [LOCAL, EXCLUDED FROM GIT]
-├── data/                 
-│   ├── users.csv         # [LOCAL, EXCLUDED FROM GIT] Actual user data
-│   └── users.example.csv # Safe example file committed to the repository
-├── logs/                 # [LOCAL, EXCLUDED FROM GIT] Execution logs
-│   └── agent.log         # [LOCAL, EXCLUDED FROM GIT]
-├── agent.py              # LangGraph agent setup, tools, and HITL logic
-├── app.py                # Streamlit presentation layer and UI
-├── auth.py               # CSV authentication and permission extraction
-├── gmail.py              # Google API client operations
-└── .env                  # [LOCAL, EXCLUDED FROM GIT] Environment variables
+├── credentials/                 # [LOCAL, EXCLUDED FROM GIT]
+│   ├── credentials.json        # Gmail OAuth credentials
+│   └── token.json              # Generated OAuth token
+├── data/
+│   ├── users.csv               # [LOCAL, EXCLUDED FROM GIT] Actual user data
+│   └── users.example.csv       # Safe example committed to the repository
+├── logs/                       # [LOCAL, EXCLUDED FROM GIT]
+│   └── agent.log               # Local execution logs
+├── agent.py                    # LangGraph agent, tools, and HITL logic
+├── app.py                      # Streamlit UI
+├── auth.py                     # Authentication and permission handling
+├── gmail.py                    # Gmail API integration
+└── .env                        # [LOCAL, EXCLUDED FROM GIT] Environment variables
 ```
 
 ## 11. Installation / Setup
@@ -103,6 +103,4 @@ U002,Jane Smith,janesmith@example.com,True,False,False
 U003,Bob Admin,bob@example.com,True,True,False
 ```
 
-## 16. Security Notes ⚠️
-- **Do not commit sensitive files:** The `.env` file, `credentials.json`, `token.json`, `users.csv`, and the `logs/` directory must be added to `.gitignore`. They contain raw secrets and Personally Identifiable Information (PII).
-- **Local Execution:** This application is currently designed for local or strictly controlled environments, as it uses local token files and a flat CSV structure for user identity.
+
