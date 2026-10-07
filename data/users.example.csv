@@ -1,0 +1,4 @@
+user_id,name,email,can_read_email,can_send_email,can_reply_email
+U001,John Doe,john@example.com,True,True,True
+U002,Sara,sara@example.com,True,False,False
+U003,Omar,omar@example.com,False,False,False

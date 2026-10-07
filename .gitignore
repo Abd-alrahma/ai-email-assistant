@@ -1,0 +1,29 @@
+# Environment variables
+.env
+
+# Google OAuth credentials
+credentials/
+token.json
+credentials.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logs
+logs/
+*.log
+data/users.csv
+# Local debug files
+debug_*.py
+test*.txt
+
+# Local test artifacts
+test_all_stage*.py
+test_command*.py
+test_interrupt*.py
+test_memory.py
+
+# Local virtual environments
+.venv/
+venv/
